@@ -16,9 +16,9 @@ import testeattornatus.api.domain.pessoa.PessoaRepository;
 public class EnderecoController {
 
     @Autowired
-    EnderecoRepository enderecoRepository;
+    private EnderecoRepository enderecoRepository;
     @Autowired
-    PessoaRepository pessoaRepository;
+    private PessoaRepository pessoaRepository;
 
     //Cadastra endereço com o ID da pessoa, checa se é o endereço principal e atualiza o cadastro.
     @PostMapping

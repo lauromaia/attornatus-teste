@@ -2,7 +2,6 @@ package testeattornatus.api.controller;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,7 +16,7 @@ import testeattornatus.api.domain.pessoa.*;
 public class PessoaController {
 
     @Autowired
-    PessoaRepository pessoaRepository;
+    private PessoaRepository pessoaRepository;
 
 //Cadastra pessoa, utilizando nome e data de nascimento como obrigatórios.
     @PostMapping

@@ -1,12 +1,8 @@
 package testeattornatus.api.domain.pessoa;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import testeattornatus.api.domain.endereco.Endereco;
-import testeattornatus.api.domain.endereco.EnderecoPrincipal;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -15,6 +11,7 @@ import java.util.List;
 @Table(name = "pessoas")
 @Entity(name = "pessoa")
 @Getter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")

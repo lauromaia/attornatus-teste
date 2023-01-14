@@ -3,6 +3,7 @@ package testeattornatus.api.domain.endereco;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import testeattornatus.api.domain.pessoa.Pessoa;
@@ -10,6 +11,7 @@ import testeattornatus.api.domain.pessoa.Pessoa;
 @Entity(name = "endereco")
 @Table(name = "enderecos")
 @Getter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Endereco {
@@ -20,7 +22,7 @@ public class Endereco {
     private String cep;
     private String numero;
     private String cidade;
-    @Enumerated(EnumType.STRING)
+
     private EnderecoPrincipal status;
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
@@ -55,4 +57,5 @@ public class Endereco {
     public void atualizaStatus(EnderecoPrincipal novoStatus){
         this.status = novoStatus;
     }
+
 }
